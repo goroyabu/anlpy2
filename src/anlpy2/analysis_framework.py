@@ -2,7 +2,8 @@
 
 import os, time, datetime, argparse
 import enum, math
-import numpy, scipy, ROOT
+# import numpy, scipy
+import ROOT
 import builtins
 
 from .analysis_status import AnalysisStatus as stt
@@ -195,7 +196,7 @@ class VANLModule :
             return stt.ErrFunc
 
         entry_list = range( self.nentries )
-        entries = numpy.array( [ range( self.nentries ) ] )
+        # entries = numpy.array( [ range( self.nentries ) ] )
 
         # numpy.apply_along_axis( self.run_loop, axis=0, arr=entries )
         for entry in entry_list :
